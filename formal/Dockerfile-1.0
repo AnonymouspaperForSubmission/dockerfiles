@@ -1,0 +1,11 @@
+FROM ubuntu:16.04
+
+RUN mkdir /usr/share/ethscope
+
+WORKDIR /usr/share/ethscope/
+
+COPY bin/ bin
+
+COPY cluster-hosts.json .
+
+COPY exported-blocks exported-blocks
